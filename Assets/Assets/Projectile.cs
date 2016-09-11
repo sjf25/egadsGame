@@ -51,6 +51,8 @@ public class Projectile : MonoBehaviour {
 
     public void CorrectImage()
     {
-        this.transform.localScale *= velocity / Mathf.Abs(velocity);
+		Vector3 scaling = this.transform.localScale;
+		scaling.x *= Mathf.Sign (velocity);
+		this.transform.localScale = scaling;
     }
 }

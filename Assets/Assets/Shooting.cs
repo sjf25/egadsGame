@@ -10,10 +10,11 @@ public class Shooting : MonoBehaviour {
     private float cooldown;
     public float fireDelay = .5F;
     public bool shooting = false;
-    public int offsetY;
+    public float offsetY;
 
 	// Use this for initialization
 	void Start () {
+		//player = this.gameObject;
         scriptPlayer = player.GetComponent<Character>();
 	}
 	
