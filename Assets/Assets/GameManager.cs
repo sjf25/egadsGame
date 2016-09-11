@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour {
     public GameObject fight;
 
     public float timer = 120F;
-    public int cactusScore;
-    public int humanScore;
+    public float cactusScore;
+    public float humanScore;
     public bool start = false;
 
 	// Use this for initialization
@@ -58,11 +58,11 @@ public class GameManager : MonoBehaviour {
         {
             if(cactusScore > humanScore)
             {
-
+                UnityEngine.SceneManagement.SceneManager.LoadScene("cactusWin");
             }
             else
             {
-
+                UnityEngine.SceneManagement.SceneManager.LoadScene("humanWin");
             }
         }
 	}
